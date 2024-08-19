@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # thoughts-laravel-app
 A simple Laravel project named 'Thoughts', built to practice core Laravel concepts and web development techniques
 =======
@@ -69,3 +70,6 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 >>>>>>> Dev
+=======
+# thoughts-app-laravel
+>>>>>>> fc70490b5f52aec31df419ea02508bc75452d613
