@@ -1,21 +1,15 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
-Route::get('/laravel', function () {
-    return view('welcome');
+Route::get('/',[DashboardController::class , 'index']);
+
+Route::get('/profile',[ProfileController::class ,'index']);
+
+Route::get('/terms',function(){
+    return view('terms');
 });
 
-
-Route::get('/', function () {
-    return"<h1>Hello world</h1>";
-});
-
-Route::get("/feed", function () {
-    return view("feed");
-});
-
-
-Route::get("/profile", function () {
-    return view("users.profile");
-});
