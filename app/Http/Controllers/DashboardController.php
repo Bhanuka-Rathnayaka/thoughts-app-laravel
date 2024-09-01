@@ -10,11 +10,7 @@ class DashboardController extends Controller
     public function index()
     {
 
-        //hardcode to save DB
-        $idea = Idea::create(
-            ['comment' => "Hello world"]
-        );
-        $idea->save();
+        
 
         return view("dashboard", [
 
