@@ -9,6 +9,20 @@ class IdeaController extends Controller
 {
     public function store()
     {
+        //<----------------Validate before submit------------------------->
+
+
+        request()->validate([
+            'idea'=>'required|min:5|max:255'
+        ]);
+
+
+
+
+        //<-------------------------------------------------------------->
+
+
+
         //<----------------idea save to database------------------------->
 
         // $idea = new Idea([
@@ -17,7 +31,7 @@ class IdeaController extends Controller
 
         // $idea->save();
 
-        //or
+                                         //or
 
         $idea = Idea::create(['comment' => request()->get('idea', '')]);
 
