@@ -47,6 +47,12 @@
 
                 </div>
             @endforeach
+            {{-- show pagination navigation button --}}
+            <div class="mt-3">
+                {{-- Set bootsrap pagiantion --}}
+                {{ $ideas->links('vendor.pagination.bootstrap-5') }}
+            </div>
+
         </div>
         <div class="col-3">
             <div class="card">

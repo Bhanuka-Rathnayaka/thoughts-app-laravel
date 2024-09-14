@@ -11,17 +11,11 @@ class IdeaController extends Controller
     {
         //<----------------Validate before submit------------------------->
 
-
         request()->validate([
-            'idea'=>'required|min:5|max:255'
+            'idea' => 'required|min:5|max:255',
         ]);
 
-
-
-
         //<-------------------------------------------------------------->
-
-
 
         //<----------------idea save to database------------------------->
 
@@ -31,12 +25,16 @@ class IdeaController extends Controller
 
         // $idea->save();
 
-                                         //or
+        //or
 
         $idea = Idea::create(['comment' => request()->get('idea', '')]);
 
         //<--------------------------------------->
 
+        //<---------------Redirect after subbmit idea with success mg------------------------>
+
         return redirect()->route('dashboard')->with('success', 'Idea Created Succefully!'); //or return redirect(url('/dashboard'))
+
+        //<--------------------------------------->
     }
 }
